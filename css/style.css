@@ -30,6 +30,10 @@
   width: 36%;
 }
 
+.wrapper {
+  display: flex;
+}
+
 #list_nav {
   display: flex;
   background-color: #ffffff;
@@ -71,6 +75,7 @@
 
 #main {
   display: flex;
+  flex-direction: column;
   margin: 3vh 6vw 0vh 6vw;
 }
 
@@ -103,7 +108,7 @@
 
 aside {
   margin-left: 15vw;
-  margin-top: 12vh;
+  margin-top: 9vh;
 }
 
 aside img {
@@ -111,10 +116,15 @@ aside img {
   text-align: center;
 }
 
-aside h2,
-aside p {
+aside h2{
   margin-top: 1vh;
   text-align: center;
+}
+
+aside p {
+  margin-top: 0.6vh;
+  text-align: left;
+  padding: 0 0.3vw 0 0.3vw;
 }
 
 #section2 {
@@ -124,10 +134,9 @@ aside p {
 
 #section2 .div1 {
   padding: 20px;
-  background-color: #ffffff;
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 #section2 .div2 {
@@ -141,13 +150,14 @@ aside p {
 }
 
 #section2 .artc1 {
-  overflow-y: hidden;
   background-color: #daffef;
   width: 44vw;
   height: 34vh;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
   padding: 25px;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 #section2 .artc1 h1 {
@@ -155,8 +165,9 @@ aside p {
   margin-top: 1.7vh;
 }
 
-#section2 .artc1 p {
+#section2 .artc1 p, #section2 .artc1 ul li {
   margin-top: 1.5vh;
+  list-style: circle;
 }
 
 #section3 {
@@ -184,10 +195,6 @@ aside p {
   border-radius: 8px;
   color: #1b1b1b;
   font-weight: bolder;
-}
-
-#section2 #artc2 {
-  padding: 9px 27px 0 27px;
 }
 
 #burger {
@@ -225,27 +232,19 @@ aside p {
 }
 
 #list_lang .img {
-  width: 4vw;
+  width: 4.8vw;
 }
 
-#profil_mentor {
+#detail_kursus {
   display: flex;
   justify-content: space-around;
 }
 
-#profil_mentor div {
-  width: 30vw;
+#detail_kursus div {
+  width: 60vw;
 }
 
-#profil_mentor img {
-  width: 100%;
-  border-radius: 6px;
-  margin-top: 2.5vh;
-}
 
-#profil_mentor span {
-  width: 20%;
-}
 
 @media only screen and (max-width: 600px) {
   * {
@@ -268,6 +267,11 @@ aside p {
     color: #1b1b1b;
     word-spacing: 5px;
     letter-spacing: 1px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
   }
 
   #head {
@@ -321,11 +325,11 @@ aside p {
   aside {
     margin: auto;
     margin-top: 17vh;
+    align-items: center;
   }
   
   aside img {
-    width: 65vw;
-    text-align: center;
+    width: 70vw;
   }
   
   aside h2,
@@ -371,7 +375,8 @@ aside p {
   }
   
   #section3 .artc1 p {
-    margin-top: 1vh;
+    margin-top: 5vh;
+    letter-spacing: 0.7px;
   }
   
   #section3 .artc1 button {
@@ -425,25 +430,15 @@ aside p {
     margin-top: 2vh;
   }
   
-  #profil_mentor {
+  #detail_kursus {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
   
-  #profil_mentor div {
+  #detail_kursus div {
     align-items: center;
     width: 60vw;
   }
   
-  #profil_mentor img {
-    width: 100%;
-    border-radius: 6px;
-  }
-  
-  #profil_mentor span {
-    width: 40%;
-    align-items: center;
-    margin: auto;
-  }
 }
